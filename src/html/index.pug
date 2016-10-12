@@ -1,0 +1,51 @@
+doctype html
+html(lang="ja")
+	head
+		meta(charset="utf-8")
+		link(rel="stylesheet" href="css/bootstrap.min.css")
+		link(rel="stylesheet" href="css/bootstrap-theme.min.css")
+		link(rel="stylesheet" href="css/main.css")
+
+		script(src="../js/main.js")
+		title Pugテスト
+	body
+		nav
+			ul
+				each val in ["Top", "About", "Works", "Contact", "wow"]
+					li: a(href="#")= val
+		.container
+			h1.page-header Pugテストサイトタイトル
+			.row
+				.col-sm-6
+					h1 test
+				.col-sm-6
+					h3 see?
+			h2.content_ttl メインタイトル
+			h3.text this is the change
+			.jumbotron
+				p wow how nice it is!!
+				p how about this?
+				h1 real;;y
+				a(href="#" onclick="fn()").btn.btn-success.pull-right rrr
+			.row
+				.col-sm-4
+					h3 this is h3
+					p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat ut lorem
+				.col-sm-4
+					h3 this is another h3
+					p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat ut lorem
+				.col-sm-4
+					h3 this is also h3
+					p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat ut lorem
+			footer
+				address 1435 S 320 E
+				p.text-right &copy; yuki arai

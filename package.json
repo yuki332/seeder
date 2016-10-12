@@ -1,0 +1,28 @@
+{
+  "name": "starter_file",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "serve": "browser-sync start --server 'dist' --files 'dist/css/*.css, dist/js/*.js, dist/*.html'",
+    "stylus": "stylus -w src/styl -o dist/css",
+    "babel": "babel src/js -d dist/js",
+    "pug": "pug src/html -o dist",
+    "build": "npm run stylus && npm run babel && npm run pug",
+    "watch:css": "onchange 'src/styl/*.styl' -- npm run stylus",
+    "watch:js": "onchange 'src/js/*.js' -- npm run babel",
+    "watch:html": "onchange 'src/html/*.pug' -- npm run pug",
+    "watch:all": "parallelshell 'npm run watch:html' 'npm run watch:css' 'npm run watch:js'",
+    "go": "parallelshell 'npm run serve' 'npm run watch:all'"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.0.0",
+    "babel-preset-es2015": "^6.14.0",
+    "browser-sync": "^2.17.2",
+    "express": "^4.14.0",
+    "parallelshell": "^2.0.0",
+    "stylus": "^0.54.5"
+  }
+}
